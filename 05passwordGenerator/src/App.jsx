@@ -106,7 +106,7 @@ useEffect(()=>{
 
                    <input type="checkbox" name="" id="" 
                        defaultChecked={charAllowed}
-                       onChange = {()=>setCharAllowed((prev)=>!prev)}
+                       onChange = {()=>setCharAllowed((prev)=>!prev)} 
                    
                    />
 
