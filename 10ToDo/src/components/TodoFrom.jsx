@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import {useTodo} from '../contexts/index'
+import React, { useState , useContext } from 'react'
+import TodoContext from "../contexts/ToDoCreateContext"
+
 function TodoFrom() {
+
     const [todo , setTodo] = useState("");
-    const {addTodo} =   useTodo();
+    const {addTodo} =   useContext(TodoContext); 
 
     const add = (e)=>{
         e.preventDefault();
