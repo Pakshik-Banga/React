@@ -3,16 +3,18 @@ import  TodoContext  from "./ToDoCreateContext"
 
 
 export const TodoProvider = ({children})=>{
+
   const data = JSON.parse(localStorage.getItem("todos"));
+
   if(!data){
-    data = [];
+       data = [];
   }
-  
+
   const [todos , setTodos] = useState(data);
 
 const addTodo = (todo) => {
       setTodos((prev) => [{id: Date.now(),...todo} , ...prev]) 
-} 
+}  
 
 const updateTodo = (id,todo)=>{
                 setTodos((prev)=>prev.map((prevTodo) => (prevTodo.id === todo.id ? todo : prevTodo )))

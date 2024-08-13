@@ -1,9 +1,8 @@
 import React from 'react'
-import { useEffect, useState , useContext } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 
 import { TodoFrom, TodoItem } from './components'
-import { TodoProvider} from './contexts/ToDoContext'
 import TodoContext from './contexts/ToDoCreateContext'
 
 
